@@ -16,7 +16,7 @@ WDD131 emphasizes core web development skills, including semantic HTML, responsi
 
 ## 🌐 GitHub Pages
 
-You can view the live version of my work here:
+You can view the live version of my work here: https://lucas-lab2.github.io/wdd131/
 
 ## 🙋 About Me
 
