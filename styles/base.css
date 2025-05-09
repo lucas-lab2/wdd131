@@ -64,8 +64,9 @@ footer {
   margin-top: 2rem;
 }
 
-.profile image {
-  width: 100%;
+img {
+  width: 200px;
   height: auto;
-  border-radius: 50%;
+  border: 1px solid black;
+  padding: 2px;
 }
