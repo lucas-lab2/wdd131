@@ -1,0 +1,152 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-family: "Winky Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Header */
+header {
+  background-color: #0A3D62;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 span {
+  color: #fdd835;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav a:hover {
+  color: #fdd835;
+  transform: translateY(-2px);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fdd835;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Main */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: #0A3D62;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 2;
+  min-width: 250px;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 200px;
+}
+
+.profile {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.location-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 20px;
+  flex-direction: row-reverse;
+}
+
+.location-text {
+  flex: 2;
+  min-width: 250px;
+  align-self: flex-start;
+}
+
+.location-image {
+  flex: 1;
+  min-width: 100px;
+  padding-top: 20px;
+}
+
+.location-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.location-image figcaption {
+  font-style: italic;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+  font-family: "Roboto", sans-serif;
+  padding: 0.2rem 0;
+  opacity: 0.9;
+}
