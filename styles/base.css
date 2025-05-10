@@ -139,3 +139,14 @@ footer {
   max-width: 100%;
   height: auto;
 }
+
+.location-image figcaption {
+  font-style: italic;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+  font-family: "Roboto", sans-serif;
+  padding: 0.2rem 0;
+  opacity: 0.9;
+}
