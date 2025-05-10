@@ -1,9 +1,20 @@
 /* Base styles */
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
   background-color: #f4f4f4;
   color: #333;
+}
+
+h1, h2, h3 {
+  font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 /* Header */
@@ -31,11 +42,28 @@ nav a {
   color: #fff;
   text-decoration: none;
   padding: 0.5rem;
-  transition: transform 0.2s;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 nav a:hover {
+  color: #fdd835;
   transform: translateY(-2px);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fdd835;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 /* Main */
@@ -88,7 +116,6 @@ footer {
   border-radius: 8px;
 }
 
-
 .location-container {
   display: flex;
   gap: 20px;
@@ -108,7 +135,6 @@ footer {
   flex: 1;
   min-width: 100px;
   padding-top: 20px;
-  
 }
 
 .location-image img {
