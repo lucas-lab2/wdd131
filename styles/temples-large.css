@@ -1,0 +1,17 @@
+/* Styles for larger screens */
+@media (min-width: 800px) {
+    nav {
+        display: flex !important;
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 0;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
