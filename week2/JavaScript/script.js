@@ -11,3 +11,15 @@ deleteButton.textContent = '❌';
 
 li.appendChild(deleteButton);
 list.append(li);
+
+buttonElement.addEventListener ('click', function() {
+// Code to execute when the element is clicked
+});
+
+buttonElement.addEventListener( 'keyup', function() {
+// Code to execute when a key is released
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+// Code to execute when the DOM is parsed
+5});
