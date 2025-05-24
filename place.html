@@ -2,17 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Brazil</title>
   <link rel="stylesheet" href="styles/place.css">
   <script defer src="scripts/place.js"></script>
 </head>
 <body>
-  <header class="hero">
+
+  <!-- 1) Green header bar -->
+  <header class="header">
     <h1>Brazil</h1>
   </header>
 
-  <main>
+  <!-- 2) Hero BG container with panels absolutely placed -->
+  <main class="hero-bg">
+    <!-- Data: top-left -->
     <section class="panel data">
       <h2>Data</h2>
       <ul>
@@ -27,6 +31,7 @@
       </ul>
     </section>
 
+    <!-- Weather: bottom-right -->
     <section class="panel weather">
       <h2>
         Weather
@@ -34,18 +39,20 @@
           <img src="images/weather-icon.svg" alt="Weather icon">
         </span>
       </h2>
-      <div class="weather-info">
-        <p><strong>Temperature:</strong> <span id="temp">10</span> °C</p>
-        <p><strong>Conditions:</strong> Partly Cloudy</p>
-        <p><strong>Wind:</strong> <span id="wind">5</span> km/h</p>
-        <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
-      </div>
+      <ul class="weather-info">
+        <li><strong>Temperature:</strong> <span id="temp">10</span> °C</li>
+        <li><strong>Conditions:</strong> Partly Cloudy</li>
+        <li><strong>Wind:</strong> <span id="wind">5</span> km/h</li>
+        <li><strong>Wind Chill:</strong> <span id="windchill"></span></li>
+      </ul>
     </section>
   </main>
 
-  <footer>
+  <!-- 3) Blue footer bar -->
+  <footer class="footer">
     <p>© <span id="year"></span> Your Name 🌺 Brazil</p>
     <p>Last Modification: <span id="lastmodified"></span></p>
   </footer>
+
 </body>
 </html>
