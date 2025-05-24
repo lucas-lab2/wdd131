@@ -6,6 +6,7 @@
   --shadow:   rgba(0,0,0,0.2);
 }
 
+/* FLEX LAYOUT TO STRETCH MAIN AND PUSH FOOTER DOWN */
 body {
   display: flex;
   flex-direction: column;
@@ -26,15 +27,16 @@ footer {
 .header {
   background: var(--green);
   padding: 1rem;
+  text-align: center;
+  flex: 0 0 auto;
 }
-
 .header h1 {
-  margin: 0;
   color: var(--white);
-  font-size: 2rem;
+  font-size: 2.5rem;
+  margin: 0;
 }
 
-/* HERO BACKGROUND SECTION */
+/* HERO BACKGROUND - GROWS TO FILL MIDDLE SPACE */
 .hero-bg {
   position: relative;
   flex: 1 0 auto;
@@ -42,6 +44,7 @@ footer {
   overflow: hidden;
 }
 
+/* Responsive hero image */
 .hero-bg__img {
   position: absolute;
   top: 0;
@@ -56,37 +59,77 @@ footer {
 .panel {
   position: absolute;
   background: var(--panel-bg);
-  box-shadow: 0 2px 8px var(--shadow);
-  padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--shadow);
+  padding: 1.5rem;
+  width: 30%;
 }
 
-/* Data panel (top-left) */
-.panel.data {
+/* DATA PANEL (top-left) */
+.data {
   top: 2rem;
-  left: 2rem;
+  left: 5%;
+}
+.data h2 {
+  background: var(--green);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  margin: -1.5rem -1.5rem 1rem -1.5rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.data ul { 
+  list-style: none; 
+}
+.data li { 
+  margin: 0.5rem 0; 
 }
 
-/* Weather panel (bottom-right) */
-.panel.weather {
+/* WEATHER PANEL (bottom-right) */
+.weather {
   bottom: 2rem;
-  right: 2rem;
+  right: 5%;
+}
+.weather h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.weather ul { 
+  list-style: none; 
+}
+.weather li { 
+  margin: 0.5rem 0; 
 }
 
-.panel h2 {
-  margin-top: 0;
-  font-size: 1.2rem;
+/* MOBILE SVG ICON */
+.icon-mobile img {
+  width: 24px;
+  vertical-align: middle;
 }
 
-.panel ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* WIDE-SCREEN: swap emoticon, hide SVG */
+@media (min-width: 700px) {
+  .icon-mobile { 
+    display: none; 
+  }
+  .weather h2::after {
+    content: ' ⛅';
+    font-size: 1.3rem;
+    margin-left: 0.5rem;
+  }
 }
 
-.panel li {
-  margin: 0.5rem 0;
-  font-size: 0.9rem;
+/* MOBILE: panels in normal flow */
+@media (max-width: 699px) {
+  .panel {
+    position: static;
+    width: auto;
+    margin: 1rem;
+  }
+  .hero-bg {
+    min-height: auto;
+    padding: 1rem 0;
+  }
 }
 
 /* FOOTER */
@@ -95,7 +138,7 @@ footer {
   background: var(--blue);
   color: var(--white);
   text-align: center;
-  padding: 1rem;
+  padding: 0.5rem 0;
   font-size: 0.8rem;
   margin: 0;
 }
