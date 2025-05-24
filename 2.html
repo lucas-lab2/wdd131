@@ -3,12 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Responsive web page showcasing Brazil’s data, weather information and live footer timestamps, styled in Brazil’s flag colors.">
+  <meta name="description" content="Responsive web page showcasing Brazil’s key data and static weather conditions, with dynamic wind chill calculation and live footer timestamps, styled in Brazil’s flag colors.">
   <meta name="author" content="Lucas Miranda">
   <title>Brazil</title>
-  <!-- Google Fonts Embed -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="styles/place.css">
   <script defer src="scripts/place.js"></script>
 </head>
@@ -19,16 +16,8 @@
     <h1>Brazil</h1>
   </header>
 
-  <!-- 2) Hero BG container with CSS-styled background image -->
+  <!-- 2) Hero BG container with panels absolutely placed -->
   <main class="hero-bg">
-    <!-- Responsive background image added via HTML with srcset -->
-    <img 
-      src="images/bg.webp" 
-      srcset="images/bg-480w.webp 480w, images/bg-800w.webp 800w, images/bg.webp 1200w" 
-      sizes="(max-width: 600px) 480px, (max-width: 992px) 800px, 1200px" 
-      alt="Scenic view of Brazil" 
-      class="hero-bg__img">
-
     <!-- Data: top-left -->
     <section class="panel data">
       <h2>Data</h2>
@@ -63,7 +52,7 @@
 
   <!-- 3) Blue footer bar -->
   <footer class="footer">
-    <p>&copy; <span id="year"></span> 💻 Lucas F. Miranda 💻 Brazil</p>
+        <p>&copy; <span id="year"></span> 💻 Lucas F. Miranda 💻 Brazil</p>
     <p>Last Modification: <span id="lastmodified"></span></p>
   </footer>
 
