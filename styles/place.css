@@ -39,9 +39,9 @@ footer {
 /* HERO BACKGROUND - GROWS TO FILL MIDDLE SPACE */
 .hero-bg {
   position: relative;
-  flex: 1 0 auto;           /* allow this to expand */
-  background: url('../images/bg.jpg') center/cover no-repeat;
-  min-height: 60vh;          /* fallback if content is small */
+  flex: 1 0 auto;           
+  background: url('../images/bg.webp') center/cover no-repeat;
+  min-height: 60vh;          
 }
 
 /* PANEL BASE */
@@ -117,7 +117,7 @@ footer {
   background: var(--blue);
   color: var(--white);
   text-align: center;
-  padding: 0.5rem 0;      /* cut vertical padding in half */
-  font-size: 0.8rem;      /* slightly smaller text */
+  padding: 0.5rem 0;     
+  font-size: 0.8rem;      
   margin: 0;
 }
