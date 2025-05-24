@@ -1,60 +1,85 @@
 :root {
-  --primary-color: #009c3b;
-  --secondary-color: #ffdf00;
-  --accent-color: #002776;
-  --text-color: #333;
+  /* Brazil flag colors */
+  --green:  #009c3b;
+  --yellow: #ffdf00;
+  --blue:   #002776;
+  --white:  #ffffff;
+  --black80: rgba(0,0,0,0.8);
+  --panel-bg: rgba(255,255,255,0.9);
 }
 
+* { box-sizing: border-box; margin:0; padding:0; }
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  color: #222;
+  line-height: 1.4;
 }
 
-.hero img {
+header.hero {
+  position: relative;
+  background-color: var(--green);
+  text-align: center;
+  color: var(--white);
+}
+header.hero img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
+}
+header.hero h1 {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  text-shadow: 0 2px 4px var(--black80);
 }
 
 main {
-  padding: 1rem;
+  position: relative;
+  max-width: 900px;
+  margin: -100px auto 2rem; /* pull up panels onto the hero */
+  padding: 0 1rem;
 }
 
-.data h2, .weather h2 {
-  margin-top: 0;
+.panel {
+  background: var(--panel-bg);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.data { width: 60%; float: left; }
+.weather {
+  width: 35%;
+  float: right;
+  position: relative;
 }
 
-.data ul {
-  list-style: none;
-  padding: 0;
-}
-
-.data li {
-  margin: 0.5rem 0;
-}
-
-.weather-icon-mobile {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: var(--accent-color);
-  color: white;
-}
-
-/* Wide view */
-@media (min-width: 601px) {
-  body {
-    background: var(--secondary-color);
-  }
+/* Weather icon for wide view via pseudo-element */
+@media (min-width: 700px) {
+  .icon-mobile { display: none; }
   .weather h2::after {
     content: " ⛅";
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
   }
-  .weather-icon-mobile {
-    display: none;
+}
+
+/* Mobile adjustments */
+@media (max-width: 699px) {
+  .data, .weather {
+    width: 100%;
+    float: none;
   }
+}
+
+/* Footer */
+footer {
+  clear: both;
+  background: var(--blue);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
 }

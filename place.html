@@ -2,17 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brazil</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script defer src="js/script.js"></script>
+  <link rel="stylesheet" href="styles/place.css">
+  <script defer src="scripts/place.js"></script>
 </head>
 <body>
   <header class="hero">
-    <img src="images/hero-small.webp" srcset="images/hero-small.webp 400w, images/hero-large.webp 800w" sizes="(max-width: 600px) 400px, 800px" alt="Brazil landscape">
+    <!-- Replace `bg.jpg` with your chosen image, ensure it's in `/images/` -->
+    <img src="images/hero-small.webp"
+         srcset="images/hero-small.webp 400w,
+                 images/hero-large.webp 800w"
+         sizes="(max-width: 600px) 400px, 800px"
+         alt="Brazil landscape">
+    <h1>Brazil</h1>
   </header>
+
   <main>
-    <section class="data">
+    <section class="data panel">
       <h2>Data</h2>
       <ul>
         <li><strong>Area:</strong> 8,515,767 sq km</li>
@@ -25,16 +32,20 @@
         <li><strong>Internet TLD:</strong> .br</li>
       </ul>
     </section>
-    <section class="weather">
-      <h2>Weather <img src="images/weather-icon.svg" class="weather-icon-mobile" alt="Weather icon"></h2>
-      <p><strong>Temperature:</strong> <span id="temp">10</span> °C</p>
-      <p><strong>Conditions:</strong> Partly Cloudy</p>
-      <p><strong>Wind:</strong> <span id="wind">5</span> km/h</p>
-      <p><strong>Wind Chill:</strong> <span id="windchill"></span> °C</p>
+
+    <section class="weather panel">
+      <h2>Weather <span class="icon-mobile"><img src="images/weather-icon.svg" alt="Weather"></span></h2>
+      <div class="weather-info">
+        <p><strong>Temperature:</strong> <span id="temp">21</span> °C</p>
+        <p><strong>Conditions:</strong> Partly Cloudy</p>
+        <p><strong>Wind:</strong> <span id="wind">5</span> km/h</p>
+        <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+      </div>
     </section>
   </main>
+
   <footer>
-    <p>&copy; <span id="year"></span> My Name, Brazil</p>
+    <p>© <span id="year"></span> Your Name 🌺 Brazil</p>
     <p>Last Modification: <span id="lastmodified"></span></p>
   </footer>
 </body>
