@@ -1,85 +1,113 @@
 :root {
   /* Brazil flag colors */
-  --green:  #009c3b;
-  --yellow: #ffdf00;
-  --blue:   #002776;
-  --white:  #ffffff;
-  --black80: rgba(0,0,0,0.8);
+  --green:   #009c3b;
+  --yellow:  #ffdf00;
+  --blue:    #002776;
+  --white:   #ffffff;
   --panel-bg: rgba(255,255,255,0.9);
+  --shadow:  rgba(0,0,0,0.2);
 }
 
-* { box-sizing: border-box; margin:0; padding:0; }
+* { margin:0; padding:0; box-sizing:border-box; }
 body {
   font-family: 'Segoe UI', sans-serif;
   color: #222;
-  line-height: 1.4;
+  background: var(--white);
 }
 
 header.hero {
   position: relative;
-  background-color: var(--green);
-  text-align: center;
-  color: var(--white);
+  /* background image goes here */
+  background-image: url('../images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-header.hero img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+
 header.hero h1 {
-  position: absolute;
-  top: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2rem;
-  text-shadow: 0 2px 4px var(--black80);
+  font-size: 2.5rem;
+  color: var(--white);
+  text-shadow: 0 3px 6px var(--shadow);
 }
 
 main {
   position: relative;
-  max-width: 900px;
-  margin: -100px auto 2rem; /* pull up panels onto the hero */
+  max-width: 1000px;
+  margin: -100px auto 2rem; /* lift panels over hero */
   padding: 0 1rem;
 }
 
 .panel {
   background: var(--panel-bg);
   border-radius: 8px;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px var(--shadow);
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-.data { width: 60%; float: left; }
-.weather {
-  width: 35%;
-  float: right;
-  position: relative;
 }
 
-/* Weather icon for wide view via pseudo-element */
+.data {
+  float: left;
+  width: 60%;
+}
+
+.weather {
+  float: right;
+  width: 35%;
+}
+
+.data h2, .weather h2 {
+  background: var(--green);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  margin: -1.5rem -1.5rem 1rem -1.5rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.data ul {
+  list-style: none;
+}
+.data li {
+  margin: 0.4rem 0;
+}
+
+.weather-info p {
+  margin: 0.6rem 0;
+}
+
+/* mobile-only SVG icon */
+.icon-mobile img {
+  width: 24px;
+  vertical-align: middle;
+}
+
+/* wide‐view emoticon after heading */
 @media (min-width: 700px) {
   .icon-mobile { display: none; }
   .weather h2::after {
-    content: " ⛅";
-    font-size: 1.2rem;
+    content: ' ⛅';
+    font-size: 1.3rem;
+    line-height: 1;
     margin-left: 0.5rem;
   }
 }
 
-/* Mobile adjustments */
+/* stack panels on small screens */
 @media (max-width: 699px) {
   .data, .weather {
-    width: 100%;
     float: none;
+    width: 100%;
   }
 }
 
-/* Footer */
 footer {
   clear: both;
+  text-align: center;
   background: var(--blue);
   color: var(--white);
-  text-align: center;
   padding: 1rem 0;
   font-size: 0.9rem;
 }

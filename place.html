@@ -9,17 +9,11 @@
 </head>
 <body>
   <header class="hero">
-    <!-- Replace `bg.jpg` with your chosen image, ensure it's in `/images/` -->
-    <img src="images/hero-small.webp"
-         srcset="images/hero-small.webp 400w,
-                 images/hero-large.webp 800w"
-         sizes="(max-width: 600px) 400px, 800px"
-         alt="Brazil landscape">
     <h1>Brazil</h1>
   </header>
 
   <main>
-    <section class="data panel">
+    <section class="panel data">
       <h2>Data</h2>
       <ul>
         <li><strong>Area:</strong> 8,515,767 sq km</li>
@@ -33,8 +27,13 @@
       </ul>
     </section>
 
-    <section class="weather panel">
-      <h2>Weather <span class="icon-mobile"><img src="images/weather-icon.svg" alt="Weather"></span></h2>
+    <section class="panel weather">
+      <h2>
+        Weather
+        <span class="icon-mobile">
+          <img src="images/weather-icon.svg" alt="Weather icon">
+        </span>
+      </h2>
       <div class="weather-info">
         <p><strong>Temperature:</strong> <span id="temp">10</span> °C</p>
         <p><strong>Conditions:</strong> Partly Cloudy</p>
@@ -45,7 +44,7 @@
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> 💻 Lucas F. Miranda 💻 Brazil</p>
+    <p>© <span id="year"></span> Your Name 🌺 Brazil</p>
     <p>Last Modification: <span id="lastmodified"></span></p>
   </footer>
 </body>
