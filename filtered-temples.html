@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temple Album</title>
+  <link rel="stylesheet" href="/styles/filtered-temples.css" />
+</head>
+<body>
+  <!-- ─────── HEADER / NAV ───────── -->
+  <header class="site-header">
+    <h1>Temple Album</h1>
+    <button class="menu-toggle" aria-label="Toggle Menu">
+      <span class="hamburger"></span>
+    </button>
+    <nav id="nav-menu" class="nav-menu">
+      <ul>
+        <li><a href="#" data-filter="home">Home</a></li>
+        <li><a href="#" data-filter="old">Old</a></li>
+        <li><a href="#" data-filter="new">New</a></li>
+        <li><a href="#" data-filter="large">Large</a></li>
+        <li><a href="#" data-filter="small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="temple-cards" class="temple-container">
+      <!-- JS will inject cards here -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Lucas Miranda</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="/scripts/filtered-temples.js"></script>
+</body>
+</html>
