@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Review Confirmation</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Thank you for your review!</h1>
+    <div id="reviewSummary"></div>
+    <div id="reviewCount"></div>
+    <a href="form.html">Submit another review</a>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> 💻 Lucas F. Miranda 💻 Brazil</p>
+    <p>Last Modification: <span id="lastmodified"></span></p>
+  </footer>
+
+  <script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('lastmodified').textContent = document.lastModified;
+  const params = new URLSearchParams(window.location.search);
+  const productId = params.get('productId');
+  const rating = params.get('rating');
+  const installDate = params.get('installDate');
+  const features = params.getAll('features');
+  const writtenReview = params.get('writtenReview') || 'N/A';
+  const userName = params.get('userName') || 'Anonymous';
+  const summaryDiv = document.getElementById('reviewSummary');
+  summaryDiv.innerHTML = `
+    <p><strong>Product ID:</strong> ${productId}</p>
+    <p><strong>Rating:</strong> ${rating} star(s)</p>
+    <p><strong>Installed on:</strong> ${installDate}</p>
+    <p><strong>Features:</strong> ${features.join(', ') || 'None'}</p>
+    <p><strong>Review:</strong> ${writtenReview}</p>
+    <p><strong>Name:</strong> ${userName}</p>
+  `;
+  let count = parseInt(localStorage.getItem('reviewCount') || '0', 10);
+  count++;
+  localStorage.setItem('reviewCount', count);
+  document.getElementById('reviewCount').innerHTML = `<p>You have submitted <strong>${count}</strong> review(s).</p>`;
+  </script>
+</body>
+</html>
