@@ -3,8 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Lucas Miranda">
+  <meta name="description" content="A user-friendly form to submit product reviews with star ratings, comments, and personal details.">
+  <!-- Google Fonts Embed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <!-- Main Stylesheet -->
   <title>Product Review Form</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script defer src="scripts/script.js"></script>
 </head>
 <body>
   <main class="container">
@@ -13,7 +21,7 @@
       <div class="form-group">
         <label for="productSelect">Product Name <span class="required">*</span></label>
         <select id="productSelect" name="productId" required>
-          <option disabled selected>Select a Product ...</option>
+          <option value="" disabled selected>Select a Product ...</option>
         </select>
       </div>
       <div class="form-group">
