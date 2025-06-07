@@ -1,0 +1,143 @@
+:root {
+  --bg-light: #E0F7FF;
+  --bg-card: #F0FCFF;
+  --nav-accent: #AEDCF9;
+  --link-blue: #4A90E2;
+  --link-hover: #357ABD;
+  --text: #333333;
+  --border: #D0E8FC;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg-light);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.site-header {
+  background: var(--bg-card);
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.logo-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  background: var(--link-blue);
+  border-radius: 8px;
+}
+
+.site-header h1 {
+  font-weight: 900;
+  font-size: 2.5rem;
+  color: var(--link-hover);
+}
+
+.tagline {
+  font-weight: 400;
+  margin-top: 8px;
+  color: var(--link-blue);
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: var(--bg-card);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  color: var(--link-blue);
+  font-weight: 700;
+}
+
+.card ul {
+  list-style: disc inside;
+}
+
+/* Color swatches */
+.color-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.swatch {
+  flex: 1;
+  min-width: 100px;
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+.swatch span {
+  display: block;
+  font-family: monospace;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+.swatch.light { background: var(--bg-light); }
+.swatch.offwhite { background: var(--bg-card); }
+.swatch.sky { background: var(--nav-accent); }
+.swatch.blue { background: var(--link-blue); color: white; }
+.swatch.darkblue { background: var(--link-hover); color: white; }
+
+/* Wireframe placeholders */
+.wire {
+  display: grid;
+  gap: 15px;
+  margin-top: 10px;
+}
+.wire.desktop {
+  grid-template-areas:
+    "header header"
+    "featured filters"
+    "footer footer";
+  grid-template-columns: 2fr 1fr;
+}
+.wire.mobile {
+  display: flex;
+  flex-direction: column;
+}
+.box {
+  background: white;
+  border: 2px dashed var(--border);
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+}
+.header { grid-area: header; }
+.featured { grid-area: featured; }
+.filters { grid-area: filters; }
+.footer { grid-area: footer; }
+
+.site-footer {
+  text-align: center;
+  padding: 15px 0;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  font-weight: 500;
+  color: var(--text);
+}
