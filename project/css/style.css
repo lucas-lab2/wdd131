@@ -141,3 +141,30 @@ body {
   font-weight: 500;
   color: var(--text);
 }
+
+/* Wireframes images side-by-side */
+.wireframes-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.wireframe-img {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.wireframe-img h3 {
+  margin-bottom: 8px;
+  color: var(--link-blue);
+  font-weight: 700;
+}
+
+.wireframe-img img {
+  max-width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
