@@ -21,7 +21,7 @@ const products = [
         name: "Laptop Ultrabook",
         price: 1099.99,
         category: "laptops",
-        image: "images/laptop_3.jpg",
+        image: "images/laptop_3.webp",
         description: "Thin and light laptop with excellent battery life."
     },
     {
@@ -29,7 +29,7 @@ const products = [
         name: "Smartphone TECNO Pro",
         price: 599.99,
         category: "smartphones",
-        image: "images/smartphone_1.jpg",
+        image: "images/smartphone_1.webp",
         description: "Smartphone with advanced camera and exceptional performance."
     },
     {
@@ -37,7 +37,7 @@ const products = [
         name: "Smartphone TECNO Elite",
         price: 799.99,
         category: "smartphones",
-        image: "images/smartphone_2.jpg",
+        image: "images/smartphone_2.webp",
         description: "Premium smartphone with innovative design."
     },
     {
@@ -45,7 +45,7 @@ const products = [
         name: "Smartphone Tech Future",
         price: 449.99,
         category: "smartphones",
-        image: "images/smartphone_3.jpg",
+        image: "images/smartphone_3.webp",
         description: "Futuristic smartphone with an affordable price."
     }
 ];
