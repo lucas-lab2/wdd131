@@ -1,54 +1,57 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Responsive tech store homepage showcasing featured products, company information, and a welcoming hero section.">
-    <meta name="author" content="Lucas Miranda">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Responsive tech store homepage showcasing featured products, company information, and a welcoming hero section."
+    />
+    <meta name="author" content="Lucas Miranda" />
     <title>TechStore - Products</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
     <script defer src="scripts/script.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="logo">TechStore</div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <div class="logo">TechStore</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section class="product-list">
-            <h1>Our Products</h1>
-            <div class="filter-section">
-                <label for="categoryFilter">Filter by category:</label>
-                <select id="categoryFilter">
-                    <option value="all">All</option>
-                    <option value="laptops">Laptops</option>
-                    <option value="smartphones">Smartphones</option>
-                    <option value="acessorios">Accessories</option>
-                </select>
-            </div>
-            <div class="product-grid" id="productGrid">
-                <!-- Lista de produtos será carregada aqui via JavaScript -->
-            </div>
-        </section>
+      <section class="product-list">
+        <h1>Our Products</h1>
+        <div class="filter-section">
+          <label for="categoryFilter">Filter by category:</label>
+          <select id="categoryFilter">
+            <option value="all">All</option>
+            <option value="laptops">Laptops</option>
+            <option value="smartphones">Smartphones</option>
+            <option value="acessorios">Accessories</option>
+          </select>
+        </div>
+        <div class="product-grid" id="productGrid">
+          <!-- Lista de produtos será carregada aqui via JavaScript -->
+        </div>
+      </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 TechStore. Todos os direitos reservados.</p>
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> 💻 Lucas F. Miranda 💻 Brazil</p>
+      <p>Last Modification: <span id="lastmodified"></span></p>
     </footer>
-
-</body>
+  </body>
 </html>
-
-

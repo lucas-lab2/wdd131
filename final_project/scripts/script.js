@@ -385,3 +385,8 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+window.addEventListener('DOMContentLoaded', () => {
+  // dynamic footer year & last modified
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('lastmodified').textContent = document.lastModified; });
