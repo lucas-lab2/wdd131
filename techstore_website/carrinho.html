@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Carrinho de Compras</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">TechStore</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrinho.html" class="active">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart">
+            <h1>Carrinho de Compras</h1>
+            <div id="cartItems" class="cart-items">
+                <!-- Itens do carrinho serão carregados aqui via JavaScript -->
+            </div>
+            <div class="cart-summary">
+                <div class="total">
+                    <strong>Total: €<span id="cartTotal">0.00</span></strong>
+                </div>
+                <button id="checkoutBtn" class="checkout-btn">Finalizar Compra</button>
+                <button id="clearCartBtn" class="clear-cart-btn">Limpar Carrinho</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TechStore. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+

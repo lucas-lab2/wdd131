@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Contacto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">TechStore</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-form">
+            <h1>Entre em Contacto</h1>
+            <p>Tem alguma dúvida ou precisa de ajuda? Entre em contacto connosco!</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Informações de Contacto</h2>
+                    <div class="contact-item">
+                        <strong>Telefone:</strong> +351 123 456 789
+                    </div>
+                    <div class="contact-item">
+                        <strong>Email:</strong> info@techstore.pt
+                    </div>
+                    <div class="contact-item">
+                        <strong>Morada:</strong> Rua da Tecnologia, 123, Lisboa
+                    </div>
+                    <div class="contact-item">
+                        <strong>Horário:</strong> Segunda a Sexta, 9h às 18h
+                    </div>
+                </div>
+
+                <form id="contactForm" class="contact-form-element">
+                    <h2>Envie-nos uma Mensagem</h2>
+                    
+                    <label for="name">Nome Completo *</label>
+                    <input type="text" id="name" name="name" required aria-describedby="nameHelp">
+                    <small id="nameHelp">Introduza o seu nome completo</small>
+
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required aria-describedby="emailHelp">
+                    <small id="emailHelp">Introduza um endereço de email válido</small>
+
+                    <label for="phone">Telefone</label>
+                    <input type="tel" id="phone" name="phone" aria-describedby="phoneHelp">
+                    <small id="phoneHelp">Opcional: número de telefone para contacto</small>
+
+                    <label for="subject">Assunto *</label>
+                    <select id="subject" name="subject" required aria-describedby="subjectHelp">
+                        <option value="">Selecione um assunto</option>
+                        <option value="informacoes">Informações sobre produtos</option>
+                        <option value="suporte">Suporte técnico</option>
+                        <option value="vendas">Vendas</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                    <small id="subjectHelp">Selecione o assunto da sua mensagem</small>
+
+                    <label for="message">Mensagem *</label>
+                    <textarea id="message" name="message" rows="5" required aria-describedby="messageHelp"></textarea>
+                    <small id="messageHelp">Descreva a sua questão ou pedido</small>
+
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TechStore. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
