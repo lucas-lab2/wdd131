@@ -390,3 +390,16 @@ window.addEventListener('DOMContentLoaded', () => {
   // dynamic footer year & last modified
   document.getElementById('year').textContent = new Date().getFullYear();
   document.getElementById('lastmodified').textContent = document.lastModified; });
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("lastmodified").textContent = document.lastModified;
+
+  // 2) Toggle do menu hambúrguer
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu   = document.getElementById("navMenu");
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+});
+
